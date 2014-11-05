@@ -25,15 +25,15 @@ stop() {
     echo "Stopping php-fpm: "
     
     kill -INT `cat $PHP_FPM_PID`
-    echo  "Stop OK,please check it youself ";
+    echo "Stop OK,please check it youself ";
 }
 
 # 平滑重启
 restart() {
-    echo -"Restarting php-fpm: "
+    echo "Restarting php-fpm: "
     
     kill -USR2 `cat $PHP_FPM_PID`
-    echo  "Stop OK,please check it youself ";
+    echo "Stop OK,please check it youself ";
 }
 
 case "$1" in
