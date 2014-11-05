@@ -1,0 +1,1 @@
+0 0 * * * sh /home/work/opdir/split_log.sh >/home/work/opdir/nohup 2>&1
