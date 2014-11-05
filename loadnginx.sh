@@ -3,9 +3,6 @@
 NGINX_HOME=/home/work/webserver
 NGINX=$NGINX_HOME/sbin/nginx
 
-
-/etc/rc.d/init.d/functions
-
 RETVAL=0
 
 start() {
