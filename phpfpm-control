@@ -6,7 +6,7 @@ PHP_FPM_PID=/home/work/php/var/php-fpm.pid
 RETVAL=0
 
 start() {
-    echo -n "Starting php-fpm"
+    echo "Starting php-fpm"
         
     nohup $PHP_FPM_BIN >/dev/null 2>&1 &
     
@@ -22,18 +22,18 @@ start() {
 
 # 立刻停止
 stop() {
-    echo -n $"Stopping php-fpm: "
+    echo "Stopping php-fpm: "
     
     kill -INT `cat $PHP_FPM_PID`
-    echo  $"Stop OK,please check it youself ";
+    echo  "Stop OK,please check it youself ";
 }
 
 # 平滑重启
 restart() {
-    echo -n $"Restarting php-fpm: "
+    echo -"Restarting php-fpm: "
     
     kill -USR2 `cat $PHP_FPM_PID`
-    echo  $"Stop OK,please check it youself ";
+    echo  "Stop OK,please check it youself ";
 }
 
 case "$1" in
