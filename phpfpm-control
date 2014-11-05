@@ -1,7 +1,7 @@
 #! /bin/sh
 
 PHP_FPM_BIN=/home/work/php/sbin/php-fpm
-PHP_FPM_PID=/home/work/php/var/php-fpm.pid
+PHP_FPM_PID=/home/work/var/php-fpm.pid
 
 RETVAL=0
 
