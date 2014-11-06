@@ -1,7 +1,10 @@
 tool
 ====
-loadnginx :
+loadnginx.sh :
   nginx sbin control
 
-fpm_control :
+phpfpm_control :
   php > 5.3.3 php-fpm control
+
+split_log.sh :
+  split all log by the day
