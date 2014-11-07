@@ -2,3 +2,9 @@
 chown root nginx
 chmod u+s nginx 
 
+2 how to proxy
+location ~* ^/test(.*)$ {
+    rewrite ^/test(.*)$ /test_proxy$1 break;
+    proxy_pass http://{ip}:{port};
+    #proxy_pass {upstream};
+}
