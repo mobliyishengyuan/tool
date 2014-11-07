@@ -1,0 +1,14 @@
+1 make svn server
+1.1 yum install subversion
+1.2 create repos
+    mkdir -p /home/work/src/svnserver/repos1
+    svnadmin create /home/work/src/svnserver/repos1
+1.3 configure repos
+    cd /home/work/src/svnserver/repos1/conf
+    edit svnserve.conf authz passwd
+1.4 start svn
+    svnserve -d -r /home/work/src/svnserver
+1.5 checkout
+    svn co svn://{ip}/repos1
+        
+    
