@@ -1,4 +1,4 @@
-
+<?php
 
 function is_completed_pic($file_path) {
     $file_handle = fopen($file_path, 'r');
