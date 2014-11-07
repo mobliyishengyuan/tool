@@ -1,2 +1,10 @@
 1 how to install sz/rz tool
 yum install lrzsz
+
+2 switch task to bg or fg
+2.1 {cmd} &
+2.2 jobs
+2.3 fg {n}
+2.4 bg {n}
+2.5 kill {n}
+2.6 ctrl + z
