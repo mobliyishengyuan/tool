@@ -1,4 +1,0 @@
-1 non root user use 80 port
-chown root nginx
-chmod u+s nginx 
-
