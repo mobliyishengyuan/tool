@@ -56,13 +56,21 @@ function is_completed_png($file_handle) {
 
 function check_end_sign($file_handle, $end_sign) {
     $end_sign_len = strlen($end_sign);
-    $end_byte_num = 2 + $end_sign_len;
+    $end_byte_num = 3 + $end_sign_len;
 
     fseek($file_handle, - $end_byte_num, SEEK_END);
     $file_end = fread($file_handle, $end_byte_num);
 
     if (substr($file_end, 0, $end_sign_len) == $end_sign
-        || substr($file_end, 2, $end_sign_len) == $end_sign) {
+        || substr($file_end, 1, $end_sign_len) == $end_sign
+        || substr($file_end, 2, $end_sign_len) == $end_sign
+        || || substr($file_end, 3, $end_sign_len) == $end_sign) {
+        return true;
+    }
+
+    fseek($file_handle, -1024, SEEK_END);
+    $other_file_end = fread($file_handle, 1024);
+    if (strpos($other_file_end, $end_sign)) {
         return true;
     }
 
