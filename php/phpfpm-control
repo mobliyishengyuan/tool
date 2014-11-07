@@ -1,0 +1,54 @@
+#! /bin/sh
+
+PHP_FPM_BIN=/home/work/php/sbin/php-fpm
+PHP_FPM_PID=/home/work/var/php-fpm.pid
+
+RETVAL=0
+
+start() {
+    echo "Starting php-fpm"
+        
+    nohup $PHP_FPM_BIN >/dev/null 2>&1 &
+    
+    RETVAL=$?
+    if [ $RETVAL -eq 0 ]
+    then
+        echo "OK"
+    else
+        echo "Failed!"
+    fi
+    return $RETVAL
+}
+
+# 立刻停止
+stop() {
+    echo "Stopping php-fpm: "
+    
+    kill -INT `cat $PHP_FPM_PID`
+    echo "Stop OK,please check it youself ";
+}
+
+# 平滑重启
+restart() {
+    echo "Restarting php-fpm: "
+    
+    kill -USR2 `cat $PHP_FPM_PID`
+    echo "Stop OK,please check it youself ";
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart)
+        restart
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+    ;;
+esac
+        
