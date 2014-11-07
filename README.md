@@ -1,10 +1,7 @@
 tool
 ====
-loadnginx.sh :
-  nginx sbin control
-
-phpfpm_control :
-  php > 5.3.3 php-fpm control
-
-split_log.sh :
-  split all log by the day
+image : the technology of the picture file
+php : php
+nginx : nginx
+linux : linux
+op : the tools of operation
