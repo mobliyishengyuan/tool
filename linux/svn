@@ -11,4 +11,5 @@
 1.5 checkout
     svn co svn://{ip}/repos1
         
-    
+2 clear user's info
+    rm -rf ~/.subversion/auth
