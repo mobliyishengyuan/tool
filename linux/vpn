@@ -1,0 +1,9 @@
+1 pptp vpn
+1.1 install soft
+  yum install ppp pptp pptp-setup
+1.2 configure
+  pptpsetup --create test --server ip地址 --username test --password test --start --encrypt
+1.3 use
+  pptp call test
+1.4 check
+  route -n
