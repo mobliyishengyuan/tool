@@ -40,3 +40,7 @@ make install<br/>
 2.4 test
 -----
 home/work/local/apache2/bin/ab -c 10 -n 10 http://www.baidu.com/aa
+3 script
+=====
+format : <br/>
+  ./ab [options] [http://]hostname[:port]/path<br/>
