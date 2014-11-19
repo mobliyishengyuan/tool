@@ -1,10 +1,22 @@
-1 non root user use 80 port
+1 非root用户使用90端口起nginx
 chown root nginx
-chmod u+s nginx 
+chmod u+s nginx
 
-2 how to proxy
+2 nginx proxy
 location ~* ^/test(.*)$ {
     rewrite ^/test(.*)$ /test_proxy$1 break;
     proxy_pass http://{ip}:{port};
     #proxy_pass {upstream};
+}
+
+3 静态化
+location ~* ^/test/log.*$ {
+    root /home/work/webroot;
+    rewrite ^/test/log.*$ /log.json break;
+}
+但是post请求会返回405，需要修改。
+location ~* ^/test/log.*$ {
+    root /home/work/webroot;
+    rewrite ^/test/log.*$ /log.json break;
+    error_page 405 =200 /log.json;
 }
