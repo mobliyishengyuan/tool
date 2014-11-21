@@ -1,0 +1,25 @@
+cat /proc/cpuinfo 
+processor       : 0   #系统中逻辑处理核的编号。对于单核处理器，则认为是其CPU编号，对于多核处理器则可以是物理核或使用超线程技术虚拟的逻辑核
+vendor_id       : GenuineIntel #CPU制造商
+cpu family      : 6 
+model           : 45 
+model name      : Intel(R) Xeon(R) CPU E5-2430 0 @ 2.20GHz #CPU属于的名字及其编号、标称主频
+stepping        : 7 
+cpu MHz         : 2200.082 #CPU的实际使用主频
+cache size      : 15360 KB #CPU二级缓存大小
+physical id     : 0 #单个CPU的标号
+siblings        : 1 #单个CPU逻辑物理核数
+core id         : 0 #当前物理核在其所处CPU中的编号，这个编号不一定连续
+cpu cores       : 1 #该逻辑核所处CPU的物理核数
+apicid          : 0 #用来区分不同逻辑核的编号，系统中每个逻辑核的此编号必然不同，此编号不一定连续
+initial apicid  : 0
+fpu             : yes #是否具有浮点运算单元
+fpu_exception   : yes #是否支持浮点计算异常
+cpuid level     : 13
+wp              : yes #表明当前CPU是否在内核态支持对用户空间的写保护
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat clflush mmx fxsr sse sse2 ht syscall nx lm up rep_good unfair_spinlock pni ssse3 cx16 sse4_1 sse4_2 popcnt aes hypervisor lahf_lm #当前CPU支持的功能
+bogomips        : 4400.16
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 46 bits physical, 48 bits virtual
+power management:
