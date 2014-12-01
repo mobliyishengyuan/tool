@@ -1,6 +1,6 @@
 model:
 	sets:
-		attr:u;
+		attr;
 		link(attr,attr):d,x;
 	endsets
 	data:
