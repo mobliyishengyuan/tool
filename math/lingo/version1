@@ -1,0 +1,22 @@
+model:
+	sets:
+		attr:u;
+		link(attr,attr):d,x;
+	endsets
+	data:
+		attr=@file(source_1_9.txt);
+		d = @file(source_1_9.txt);
+		@text(result_1_9.txt)=x;
+	enddata
+	min=@sum(attr(i):@sum(attr(j):d(i,j)*x(i,j)););
+	@for(attr(i):@for(attr(j):@bin(x(i,j))););
+	@for(attr(i):@for(attr(j):x(i,j)+x(j,i)<=1););
+	@for(attr(i):@sum(attr(j):x(i,j))=1;);
+	@for(attr(j):@sum(attr(i):x(i,j))=1;);
+end
+go
+	alter all '_1_9'_1_6'
+go
+	alter all '_1_6'_1_3'
+go
+	set terseo 0
