@@ -8,3 +8,6 @@ yum install lrzsz
 2.4 bg {n}
 2.5 kill {n}
 2.6 ctrl + z
+
+3 打包时排除指定目录
+tar -czvf work.tar --exclude=test/1 test
