@@ -1,0 +1,2 @@
+1 创建表时报错ERROR 1005 (HY000): Can't create table'' (errno: -1)
+在数据表的存储目录删除ibd文件，再创建即可
