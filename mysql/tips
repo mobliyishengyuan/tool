@@ -1,0 +1,8 @@
+1 add user
+CREATE USER 'username'@'host' IDENTIFIED BY 'password';
+
+2 grant user
+给用户所有表的权限
+grant all privileges on *.* to username@'host' identified by 'password';
+
+host为%
