@@ -11,3 +11,6 @@ yum install lrzsz
 
 3 打包时排除指定目录
 tar -czvf work.tar --exclude=test/1 test
+
+4 alias
+alias a='aa'
