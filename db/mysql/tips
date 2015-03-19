@@ -1,2 +1,5 @@
 1 创建表时报错ERROR 1005 (HY000): Can't create table'' (errno: -1)
 在数据表的存储目录删除ibd文件，再创建即可
+
+2 复制一条记录
+insert into 表1(字段1,字段2,字段3) select 字段1,字段2,字段3 from 表1 where id=1
