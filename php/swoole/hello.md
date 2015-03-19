@@ -8,7 +8,7 @@ swoole简介
 示例
 ======
 ### Server.php
-    <?php
+    \<?php
     class HelloWorld_Server {
         private $serv;
     
@@ -54,7 +54,7 @@ swoole简介
     $server = new HelloWorld_Server();
 
 handle.php
-        <?php
+        \<?php
         function handle_connect($serv, $fd, $from_id) {
             printf("Client Connect, fd[%s] from_id[%s]\n", $fd, $from_id);
         }
