@@ -52,6 +52,7 @@ swoole简介
     }
     
     $server = new HelloWorld_Server();
+
 handle.php
         <?php
         function handle_connect($serv, $fd, $from_id) {
