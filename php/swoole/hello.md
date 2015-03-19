@@ -67,21 +67,21 @@ swoole简介
     function handle_close($serv, $fd, $from_id) {
         printf("Close Connection, fd[%s] from_id[%s]\n", $fd, $from_id);
     }
-php server.php，日志如下：
+### php server.php，日志如下：
         
-        Start
-        include
-模拟client
-        telnet 127.0.0.1 8000
-        Trying 127.0.0.1...
-        Connected to 127.0.0.1.
-        Escape character is '^]'.
-        h
-        Hello World!
-此时server日志
-        Client Connect, fd[1] from_id[0]
-        Recevie Data, fd[1] from_id[0] data_size[3] data[h
-        ]
+    Start
+    include
+### 模拟client
+    telnet 127.0.0.1 8000
+    Trying 127.0.0.1...
+    Connected to 127.0.0.1.
+    Escape character is '^]'.
+    h
+    Hello World!
+### server log
+    Client Connect, fd[1] from_id[0]
+    Recevie Data, fd[1] from_id[0] data_size[3] data[h
+    ]
 案例
 ======
 {}
