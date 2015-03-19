@@ -1,10 +1,14 @@
 swoole重新定义PHP
-swoole简介
+简介
 ======
 {}
 优势
 ======
-{}
+1. 纯C编写性能强，没有过多使用Zend API，数据结构自定义
+2. 简单易用开发效率高
+3. 事件驱动异步非阻塞
+4. 支持多进程/多线程
+5. CPU亲和性/守护进程
 示例
 ======
 ### Server.php
@@ -85,7 +89,8 @@ client send 10次后，worker process重新加载，重新include handle.php
     ]
 案例
 ======
-{}
+swoole目前已被多家移动互联网、物联网、网络游戏、手机游戏企业使用，替代了C++、Java等复杂编程语言来实现网络服务器程序。 使用PHP+Swoole，开发效率可以大大提升。
+腾讯 阿里 YY语音等多家公司均有在使用，具体案例见 http://wiki.swoole.com/wiki/page/p-case.html。
 问题
 ======
 {}
