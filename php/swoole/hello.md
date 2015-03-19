@@ -13,20 +13,20 @@ swoole简介
         private $serv;
     
         public function __construct() {
-            $this->serv = new swoole_server('0.0.0.0', 8000);
+            $this->serv = new swoole_server('0.0.0.0', 8000); // 监听全部地址，端口为8000
             $this->serv->set(array(
-                'worker_num' => 1,
-                'daemonize' => false,
-                'max_request' => 10, 
+                'worker_num' => 1, // 设置worker进程数目，类似nginx worker_process
+                'daemonize' => false, // 是否作为守护进程运行
+                'max_request' => 10,  // 最大请求数目，超过此数目，则reload worker process
             ));    
     
-            $this->serv->on('Start', array($this, 'onStart'));
-            $this->serv->on('WorkerStart', array($this, 'onWorkerStart'));
-            $this->serv->on('Connect', array($this, 'onConnect'));
-            $this->serv->on('Receive', array($this, 'onReceive'));
-            $this->serv->on('Close', array($this, 'onClose'));
+            $this->serv->on('Start', array($this, 'onStart')); // 绑定server start事件
+            $this->serv->on('WorkerStart', array($this, 'onWorkerStart')); // 绑定worker start事件
+            $this->serv->on('Connect', array($this, 'onConnect')); // 绑定client connect事件
+            $this->serv->on('Receive', array($this, 'onReceive')); // 绑定receive client data事件
+            $this->serv->on('Close', array($this, 'onClose')); // 绑定client close事件
     
-            $this->serv->start();
+            $this->serv->start(); // 启动server
         }   
     
         public function onStart($serv) {
@@ -61,7 +61,7 @@ swoole简介
     
     function handle_receive($serv, $fd, $from_id, $data) {
         printf("Recevie Data, fd[%s] from_id[%s] data_size[%s] data[%s]\n", $fd, $from_id, strlen($data), $data);
-        $serv->send($fd, "Hello World!\n");
+        $serv->send($fd, "Hello World!\n"); // 向client发送数据
     }
     
     function handle_close($serv, $fd, $from_id) {
@@ -78,6 +78,7 @@ swoole简介
     Escape character is '^]'.
     h
     Hello World!
+client send 10次后，worker process重新加载，重新include handle.php
 ### server log
     Client Connect, fd[1] from_id[0]
     Recevie Data, fd[1] from_id[0] data_size[3] data[h
