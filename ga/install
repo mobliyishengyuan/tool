@@ -4,10 +4,10 @@ go官网链接被墙
 可从go中文网站下载 http://www.golangtc.com/
 wget 下载
 
-
-自定是安装目录.bash_profile
+自定义安装目录.bash_profile
 export GOROOT=$HOME/go
 export PATH=$PATH:$GOROOT/bin
+source .bash_profile
 
 cd go/src/
 ./all.bash
