@@ -1,0 +1,9 @@
+1 install libcap
+   wget http://www.tcpdump.org/release/libpcap-1.7.2.tar.gz
+2 install tcpdump
+   wget http://www.tcpdump.org/release/tcpdump-4.7.3.tar.gz
+3 add bin sbin path
+
+4 tcpdump
+tcpdump: eth1: You don't have permission to capture on that device
+(socket: Operation not permitted)
