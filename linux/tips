@@ -14,3 +14,10 @@ tar -czvf work.tar --exclude=test/1 test
 
 4 alias
 alias a='aa'
+
+5 sudo
+5.1 root login
+5.2 chmod u+w /etc/sudoers
+5.3 vim /etc/sudoers  
+    xxx ALL=(ALL) 
+5.4 chmod u-w /etc/sudoers
