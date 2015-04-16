@@ -1,0 +1,10 @@
+1 tcpdump host 210.27.48.1 
+  截获所有210.27.48.1 的主机收到的和发出的所有的数据包
+  
+2 tcpdump tcp port 23 and host 210.27.48.1
+  获取主机210.27.48.1接收或发出的telnet包，使用如下命令
+
+3 
+
+
+http://www.cnblogs.com/ggjucheng/archive/2012/01/14/2322659.html
