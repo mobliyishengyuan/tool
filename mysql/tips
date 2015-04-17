@@ -6,3 +6,9 @@ CREATE USER 'username'@'host' IDENTIFIED BY 'password';
 grant all privileges on *.* to username@'host' identified by 'password';
 
 host为%
+
+3 import and export
+3.1 export
+mysqldump -uroot -proot Doctor_dev > data.sql
+3.2 import
+mysql -uroot -proot Doctor_dev < data.sql
