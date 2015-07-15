@@ -1,0 +1,13 @@
+wget https://github.com/antirez/redis/archive/3.0.2.zip
+
+unzip 3.0.2.zip
+
+cd redis-3.0.2/
+
+make PREFIX=/home/work/redis install
+
+cp /home/work/src/redis-3.0.2/redis.conf /home/work/redis/etc
+
+edit redis.conf
+
+~/redis/bin/redis-server ~/redis/etc/redis.conf 
