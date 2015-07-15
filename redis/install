@@ -11,3 +11,5 @@ cp /home/work/src/redis-3.0.2/redis.conf /home/work/redis/etc
 edit redis.conf
 
 ~/redis/bin/redis-server ~/redis/etc/redis.conf 
+
+@link http://www.cnblogs.com/zhuhongbao/archive/2013/06/04/3117997.html
