@@ -15,4 +15,5 @@ write & read
 =====
 	Mysql的client本身是支持设置的，php的mysqli扩展没有将其暴露出来。网上有一种方法，直接进行设置。文章见[link](http://www.jb51.net/article/27016.htm)，经实验不可行，决定分析下。
 	Mysql client opt声明的地方
+	
 	Mysql/include/mysql.h
