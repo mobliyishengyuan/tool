@@ -86,4 +86,14 @@ php mysqli扩展设置options的部分如下：
         1670             return IS_NULL;
         ……
 由此可以知道，原因是mysqli扩展中对于这些非法options不会受理。想要进行修复的话，需要注视掉1637和1644行，然后重新编译mysqli.so。
+
 至于为什么网上流程的文章实验的可以，怀疑其对应版本的mysql，对于MYSQL_OPT_READ_TIMEOUT的申明使用的是define而不是enum。
+
+相关的收获
+=====
+1. 了解mysqli option相关流程。
+2. enum申明的是变量，ifdef false。之前这个是不明确。
+todo
+=====
+1. mysql client connect、write、read流程。
+2. 如何设置ms级超时。
