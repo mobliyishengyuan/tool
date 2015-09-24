@@ -138,6 +138,7 @@ php mysqli扩展设置options的部分如下：
 1. 了解mysqli option相关流程。
 2. enum申明的是变量，ifdef false。之前这个是不明确。
 3. 网络状态模拟工具的使用。
+
 todo
 =====
 1. mysql client connect、write、read流程。
