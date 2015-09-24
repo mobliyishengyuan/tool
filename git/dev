@@ -1,0 +1,10 @@
+1. git clone git@${git_path}
+2. git checkout develop
+3. edit and save file
+4. git add ${file_path}
+5. git commint -m 'content'
+6. git push orgin develop
+7. git pull
+8. git checkout online
+9. git merge develop
+10. git push
