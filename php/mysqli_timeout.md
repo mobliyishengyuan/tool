@@ -69,7 +69,8 @@ php mysqli扩展设置options的部分如下：
         1616 {
         1617     switch (option) {
         ……
-        // if MYSQL_OPT_READ_TIMEOUT define时下述options项才可用，才会返回IS_LONG，不然就会返回IS_NULL。其中包含MYSQL_OPT_READ_TIMEOUT、MYSQL_OPT_READ_TIMEOUT。
+        // if MYSQL_OPT_READ_TIMEOUT define时下述options项才可用，才会返回IS_LONG，不然就会返回IS_NULL。
+        // 其中包含MYSQL_OPT_READ_TIMEOUT、MYSQL_OPT_READ_TIMEOUT。
         // enum申明的是变量，ifdef false。
         1637 #ifdef MYSQL_OPT_READ_TIMEOUT
         1638         case MYSQL_OPT_READ_TIMEOUT:
