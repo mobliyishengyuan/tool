@@ -21,3 +21,9 @@ alias a='aa'
 5.3 vim /etc/sudoers  
     xxx ALL=(ALL) 
 5.4 chmod u-w /etc/sudoers
+
+6  disk free
+    df
+    
+7 disk use
+    du -sh
