@@ -1,0 +1,2 @@
+1 scp -l limit
+  Limits the used bandwidth, specified in Kbit/s.
