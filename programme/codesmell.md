@@ -48,3 +48,8 @@ Watch out for objects that contain a lot of optional or unnecessary fields. If y
 
 Code Smells Between Classes
 =====
+
+Link
+=====
+http://blog.codinghorror.com/code-smells/
+http://www.nowamagic.net/librarys/veda/detail/2053
