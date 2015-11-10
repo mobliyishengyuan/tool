@@ -1,4 +1,4 @@
-./configure --prefix=/home/work/php --with-mysqli --with-curl
+./configure --prefix=/home/work/php enable-fpm --with-openssl --with-mysqli --with-curl
 
 make
 
