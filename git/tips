@@ -25,3 +25,6 @@ git push origin
 git clone git://github.com/youname/demo.git
 or
 git clone git@github.com:youname/demo.git
+
+6 fix conflict 
+http://www.01happy.com/git-resolve-conflicts/
