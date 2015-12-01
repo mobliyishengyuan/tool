@@ -1,13 +1,26 @@
 install go
-1 获取安装包
-go官网链接被墙
-可从go中文网站下载 http://www.golangtc.com/
-wget 下载
+### 获取安装包
+    go官网链接被墙
+    可从go中文网站下载 http://www.golangtc.com/
+    或者从github上下载
 
-自定义安装目录.bash_profile
-export GOROOT=$HOME/go
-export PATH=$PATH:$GOROOT/bin
-source .bash_profile
+### 设置环境变量
+    vim .bash_profile
+    
+    GOROOT为Go安装路径
+    GOPATH为Go工作路径
 
-cd go/src/
-./all.bash
+    export GOROOT=$HOME/go
+    export GOPATH=$HOME/gowork
+    export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+    
+    source .bash_profile
+
+### 安装
+    cd go/src/
+    ./all.bash
+
+
+
+
+
