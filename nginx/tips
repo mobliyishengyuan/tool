@@ -28,3 +28,15 @@ ldd $(which ./nginx)
 发现libssl.so.4 no found
 
 ln -s /lib64/libssl.so.6 /usr/lib/libssl.so.4
+
+5 nginx多条件判断
+set $flag 0;
+if ($remote_addr ~ "^(12.34|56.78)") {
+    set $flag "${flag}1";
+}
+if ($http_user_agent ~* "spider") {
+    set $flag "${flag}2";
+}
+if ($flag = "012") {
+    return 403;
+}
