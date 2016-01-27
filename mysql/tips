@@ -12,3 +12,5 @@ host为%
 mysqldump -uroot -proot Doctor_dev > data.sql
 3.2 import
 mysql -uroot -proot Doctor_dev < data.sql
+3.3 alter
+ALTER TABLE company ADD `time_2` int(11) NOT NULL COMMENT '时间' AFTER `time_1`;
