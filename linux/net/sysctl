@@ -1,0 +1,13 @@
+今天想试一下redis，写了个程序，对redis连续进行100000访问，却出现以了Cannot assign requested address的问题，我起先是以为是redis的问题（可能承受不了这么多访问量），可是redis被大家吹的那么NB，不会出现这么SB的问题吧，于 是google之,发现原来是：
+客户端频繁的连服务器，由于每次连接都在很短的时间内结束，导致很多的TIME_WAIT，以至于用光了可用的端 口号，所以新的连接没办法绑定端口，即“Cannot assign requested address”。是客户端的问题不是服务器端的问题。通过netstat，的确看到很多TIME_WAIT状态的连接。
+从网上找了解决办法：
+执行命令修改如下2个内核参数  
+sysctl -w net.ipv4.tcp_timestamps=1  开启对于TCP时间戳的支持,若该项设置为0，则下面一项设置不起作用
+sysctl -w net.ipv4.tcp_tw_recycle=1  表示开启TCP连接中TIME-WAIT sockets的快速回收
+不过好像只有root用户才能有修改这两个参数的权限，我正好有机器的root权限，修改之，发现，还真可以。
+但是如果没有root权限怎么解决，能不能通过修改程序获得就不知道了。希望高人看到后指点一下！
+
+
+备注：
+sysctl 只是临时的修改配置信息，可以直接修改 /etc/sysctl.conf 文件进行永久修改
+sysctl 命令使用：http://blog.chinaunix.net/uid-20622737-id-3759357.html
